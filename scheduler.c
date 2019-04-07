@@ -24,7 +24,6 @@ Rt[9]=9999;
 for(Time=0;Remain!=n;Time++)
 {
 Shortest=9;
-  
 for(i=0;i<n;i++)
 {
 if(At[i]<=Time && Rt[i]<Rt[Shortest] && Rt[i]>0)
