@@ -24,3 +24,25 @@ Rt[9]=9999;
 for(Time=0;Remain!=n;Time++)
 {
 Shortest=9;
+  
+for(i=0;i<n;i++)
+{
+if(At[i]<=Time && Rt[i]<Rt[Shortest] && Rt[i]>0)
+{
+Shortest=i;
+}}
+        
+Rt[Shortest]--;
+if(Rt[Shortest]==0)
+{
+Remain++;
+EndTime=Time+1;
+printf("\nP[%d]\t|\t%d\t|\t%d",Shortest+1,EndTime-At[Shortest],EndTime-Bt[Shortest]-At[Shortest]);
+Sum_Wait+=EndTime-Bt[Shortest]-At[Shortest];
+Sum_Turnaround+=EndTime-At[Shortest];
+}
+}
+printf("\n\nAverage waiting time = %f\n",Sum_Wait*1.0/n);
+printf("Average Turnaround time = %f",Sum_Turnaround*1.0/5);
+return 0;
+}
