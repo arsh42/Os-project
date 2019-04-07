@@ -8,4 +8,6 @@ int main()
     scanf("%f",&m);
     printf("Enter Access Time Of Memory :  ");
     scanf("%f",&acm);
+     printf("Enter Effective Access time  : ");
+
    
