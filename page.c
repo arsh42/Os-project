@@ -9,5 +9,11 @@ int main()
     printf("Enter Access Time Of Memory :  ");
     scanf("%f",&acm);
      printf("Enter Effective Access time  : ");
+    scanf("%f",&eat);
+    printf("Enter The Replacement Page Modification (Percentage) : ");
+    scanf("%f",&r);
+    f=(eat-acm)/(((r*m)+(1-r)*nm)+acm);
+    printf(" Page Fault Maximum Acceptable Is  %f",f);
+}
 
    
